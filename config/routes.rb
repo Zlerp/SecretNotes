@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'sessions#new'   # other ways of doing this.
+  resource :sessions
   resource :users   # This is singular because the user only cares about themself
                     # If you were making an Admin, it would have resources :users, because he cares about all the users.
 
