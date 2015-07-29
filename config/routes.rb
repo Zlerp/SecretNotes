@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  resource :users   # This is singular because the user only cares about themself
+                    # If you were making an Admin, it would have resources :users, because he cares about all the users.
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
